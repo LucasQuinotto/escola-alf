@@ -11,7 +11,7 @@ namespace EscolaAlf.Application.Controllers
     public class ProvasController : ApiController
     {
         [HttpPost]
-        public IList<Prova> CadastrarProva([FromBody] CadastrarProvaRequest request)
+        public Prova CadastrarProva([FromBody] CadastrarProvaRequest request)
         {
             Console.WriteLine("Cadastrando prova...");
 
@@ -24,15 +24,15 @@ namespace EscolaAlf.Application.Controllers
                     Peso = questao.Peso
                 }).ToList();
 
-            Dados.Provas.Add(new Prova
+            var prova = new Prova
             {
                 Id = GerarIdExterno(),
                 Questoes = questoesValidadas,
-            });
-            
-            Console.WriteLine("Prova cadastrada com sucesso");
+            };
+            Dados.Provas.Add(prova);
 
-            return Dados.Provas;
+            Console.WriteLine("Prova cadastrada com sucesso");
+            return prova;
         }
 
         private IEnumerable<QuestaoDto> ValidarQuestoes(IList<QuestaoDto> questoes)
@@ -47,6 +47,11 @@ namespace EscolaAlf.Application.Controllers
                 throw new Exception("Numero da questão não pode ser duplicado");
 
             var questoesOrdenadas = questoes.OrderBy(x => x.Numero).ToList();
+            var primeiraQuestao = questoesOrdenadas.FirstOrDefault();
+
+            if (primeiraQuestao?.Numero < 1)
+                throw new Exception("A sequencia de questões deve começar em 1");
+
             var ultimaQuestao = questoesOrdenadas.LastOrDefault();
 
             if (questoes.Count != ultimaQuestao?.Numero)
