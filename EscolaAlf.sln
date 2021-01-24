@@ -4,6 +4,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{089EB06E-CDF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolaAlf.Application", "src\EscolaAlf.Application\EscolaAlf.Application.csproj", "{2B0F5AAD-C5AA-44B1-8720-C133E698CDC2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{567F8894-5226-49BC-BFAE-C511E7C3EAC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolaAlf.ApplicationTests", "tests\EscolaAlf.ApplicationTests\EscolaAlf.ApplicationTests.csproj", "{6F431971-254A-45D2-8468-9A4382C1E6F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,8 +18,13 @@ Global
 		{2B0F5AAD-C5AA-44B1-8720-C133E698CDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B0F5AAD-C5AA-44B1-8720-C133E698CDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B0F5AAD-C5AA-44B1-8720-C133E698CDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F431971-254A-45D2-8468-9A4382C1E6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F431971-254A-45D2-8468-9A4382C1E6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F431971-254A-45D2-8468-9A4382C1E6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F431971-254A-45D2-8468-9A4382C1E6F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2B0F5AAD-C5AA-44B1-8720-C133E698CDC2} = {089EB06E-CDFA-4C34-95FC-3AB2EB979BB9}
+		{6F431971-254A-45D2-8468-9A4382C1E6F2} = {567F8894-5226-49BC-BFAE-C511E7C3EAC5}
 	EndGlobalSection
 EndGlobal
