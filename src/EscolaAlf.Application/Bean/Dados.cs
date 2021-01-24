@@ -10,5 +10,6 @@ namespace EscolaAlf.Application.Bean
         public static IList<Prova> Provas { get; set; } = new List<Prova>();
 
         public static IList<Gabarito> Gabaritos { get; set; } = new List<Gabarito>();
+        public static IList<NotaAlunoProva> Notas { get; set; } = new List<NotaAlunoProva>();
     }
 }

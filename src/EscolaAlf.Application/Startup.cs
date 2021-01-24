@@ -18,6 +18,7 @@ namespace EscolaAlf.Application
             services.AddTransient<ICadastrarAlunoRequest, CadastrarAlunoRequest>();
             services.AddTransient<ICadastrarProvaRequest, CadastrarProvaRequest>();
             services.AddTransient<ICadastrarGabaritoRequest, CadastrarGabaritoRequest>();
+            services.AddTransient<ICadastrarRespostasAlunoRequest, CadastrarRespostasAlunoRequest>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
