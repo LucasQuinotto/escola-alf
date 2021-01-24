@@ -23,9 +23,13 @@ namespace EscolaAlf.Application.Requests
                     Peso = questao.Peso
                 }).ToList();
 
+            var pesoTotalProva = questoesValidadas.Sum(questaoProva => questaoProva.Peso);
+            var valorPeso = (double) 10 / pesoTotalProva;
+
             var prova = new Prova
             {
                 Id = GerarIdExterno(),
+                ValorPeso = valorPeso,
                 Questoes = questoesValidadas,
             };
             Dados.Provas.Add(prova);

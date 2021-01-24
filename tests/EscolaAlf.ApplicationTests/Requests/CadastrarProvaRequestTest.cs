@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using EscolaAlf.Application.Bean;
 using EscolaAlf.Application.Dtos;
 using EscolaAlf.Application.Entities;
@@ -127,6 +126,7 @@ namespace EscolaAlf.ApplicationTests.Requests
 
             Assert.Contains("ALF-", prova.Id);
             Assert.Equal(4, prova.Questoes.Count);
+            Assert.Equal(1.429, prova.ValorPeso, 3);
             Assert.Equal(1, Dados.Provas.Count);
         }
     }

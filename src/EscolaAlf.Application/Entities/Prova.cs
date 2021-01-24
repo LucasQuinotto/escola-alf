@@ -5,6 +5,7 @@ namespace EscolaAlf.Application.Entities
     public class Prova
     {
         public string Id { get; set; }
+        public double ValorPeso { get; set; }
         public IList<Questao> Questoes { get; set; }
     }
 
